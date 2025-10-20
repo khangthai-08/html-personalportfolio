@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Khang Thai - Web Developer - Portfolio - HTML based" />
+    <title>My Portfolio</title>
+
+    <style>
+:root{
+    font-family: system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+    background:#f7f7f7;
+    color:#111;
+    --accent:#0366d6;
+}
+*{box-sizing:border-box}
+body{
+    max-width:960px;
+    margin:24px auto;
+    padding:24px 16px;
+    background:var(--background,#f7f7f7);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    color:var(--text,#111);
+    line-height:1.45;
+}
+
+/* Header */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:12px;
+    margin-bottom:8px;
+}
+header h1{font-size:1.25rem;margin:0}
+nav a{
+    margin-left:12px;
+    text-decoration:none;
+    color:var(--accent);
+    font-weight:600;
+}
+
+/* Divider */
+hr{margin:16px 0;border:none;border-top:1px solid #e6e6e6}
+
+/* Page titles (centered hero area) */
+h2,h3{margin:6px 0;text-align:center}
+h2{font-size:1.25rem;color:#111}
+h3{font-size:1rem;color:#555}
+
+/* Centered layout wrapper for content boxes */
+.main{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    align-items:center; /* centers boxes horizontally */
+}
+
+/* Card: centered content inside a clean box */
+.card{
+    background:#fff;
+    padding:22px;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(12,20,30,0.06);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center; /* vertically center content inside the card */
+    text-align:center;
+    gap:12px;
+    width:100%;
+    max-width:560px;
+    min-height:260px; /* makes a visible centered box */
+}
+
+/* Link inside card */
+.card a{
+    color:var(--accent);
+    text-decoration:none;
+    font-weight:600;
+    background:linear-gradient(90deg, rgba(3,102,214,0.08), transparent);
+    padding:6px 10px;
+    border-radius:8px;
+}
+
+/* Avatar */
+.card img,
+.avatar{
+    width:160px;
+    height:160px;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
+    margin:6px auto 0;
+    box-shadow:0 6px 18px rgba(12,20,30,0.06);
+}
+
+/* Skills section: match visual style to card and center content */
+.skills-section{
+    margin-top:0;
+    padding:18px;
+    background:#fff;
+    border-radius:12px;
+    box-shadow:0 6px 18px rgba(12,20,30,0.06);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center; /* vertically center content inside the box */
+    text-align:center;
+    gap:12px;
+    width:100%;
+    max-width:560px;
+    min-height:140px;
+}
+
+.skills{
+    display:flex;
+    gap:16px;
+    margin-top:8px;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+}
+.skills img{
+    width:70px;
+    height:auto;
+    display:block;
+    filter:grayscale(0);
+    transition:transform .18s ease, filter .18s ease;
+}
+.skills img:hover{ transform:translateY(-4px); filter:grayscale(0); }
+
+/* Buttons / CTA */
+.btn{
+    display:inline-block;
+    padding:8px 12px;
+    background:var(--accent);
+    color:#fff;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:600;
+    box-shadow:0 4px 12px rgba(3,102,214,0.12);
+}
+
+/* Footer adjustments are handled separately in existing footer block */
+
+/* Responsive tweaks */
+@media (max-width:520px){
+    body{padding:18px 12px}
+    .card img, .avatar{width:120px;height:120px}
+    .card{min-height:200px;padding:16px}
+    .skills img{width:56px}
+}
+</style>
+
+</head>
+
+<body>
+        <header>
+                <h1>Khang Thai's Portfolio</h1>
+                <nav><a href="#contact">Contact</a></nav>
+        </header>
+
+        <hr />
+        <h2>I'm a Web developer</h2>
+        <h3>About Me</h3>
+
+        <main class="main">
+            <div class="card">
+                    <a href="./about.html" aria-label="Open About page">About Me Page</a>
+                    <img class="avatar" src="./personalpicture.png" alt="Khang Thai — portrait" loading="lazy" width="160" height="160"/>
+            </div>
+            
+            <section class="skills-section" aria-labelledby="skills-title">
+                    <h4 id="skills-title" style="margin:0">Current Languages</h4>
+                    <div class="skills" role="list">
+                            <img src="./html-5.png" alt="HTML5" title="HTML5" width="70"/>
+                            <img src="./css-3.png" alt="CSS3" title="CSS3" width="65"/>
+                            <img src="./pngegg.png" alt="JavaScript" title="JavaScript" width="70"/>
+                    </div>
+            </section>
+        </main>
+    
+    
+    
+    <footer id="contact">
+      <style>
+        #contact{margin-top:28px;font-size:.95rem;color:#333}
+        #contact hr{margin:12px 0;border:none;border-top:1px solid #e6e6e6}
+        .contact-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+        .contact-item{display:flex;align-items:center;gap:10px;background:#fff;padding:8px 12px;border-radius:8px;
+                      box-shadow:0 1px 4px rgba(0,0,0,.06)}
+        .contact-item a{color:#0366d6;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+        .icon{width:20px;height:20px;flex:0 0 20px;display:inline-block}
+        .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+      </style>
+
+      <hr />
+      <p>Contact me:</p>
+
+      <div class="contact-row">
+        <!-- Email -->
+        <div class="contact-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 7.5v9a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-9"></path>
+            <path d="M21 7.5L12 13 3 7.5"></path>
+          </svg>
+          <a href="mailto:khanghuuthk@gmail.com" aria-label="Send email to Khang Thai">khanghuuthk@gmail.com</a>
+        </div>
+
+        <!-- GitHub -->
+        <div class="contact-item">
+          <svg class="icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 0C3.58 0 0 3.58 0 8a8 8 0 0 0 5.47 7.59c.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49
+              -2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01
+              1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+              0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 2-.27c.68
+              0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+              0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8
+              8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+          </svg>
+          <a href="https://github.com/khangthai-08" target="_blank" rel="noopener noreferrer" aria-label="Open Khang Thai GitHub (opens in new tab)">
+            github.com/khangthai-08
+          </a>
+        </div>
+
+        <!-- LinkedIn -->
+        <div class="contact-item">
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19 0H5C2.238 0 0 2.238 0 5v14c0 2.762 2.238 5 5 5h14c2.762 0 5-2.238 5-5V5c0-2.762-2.238-5-5-5zM7.5 19h-3v-9h3v9zM6
+              9.732c-.966 0-1.75-.79-1.75-1.764 0-.974.784-1.764 1.75-1.764S7.75 7 7.75 7.974c0 .974-.784 1.758-1.75 1.758zM20.5
+              19h-3v-4.5c0-1.073-.021-2.453-1.496-2.453-1.497 0-1.727 1.169-1.727 2.38V19h-3v-9h2.879v1.229h.041c.401-.759
+              1.378-1.558 2.839-1.558 3.036 0 3.597 1.998 3.597 4.592V19z"/>
+          </svg>
+          <a href="https://www.linkedin.com/in/khang-thai-b0780538a/" target="_blank" rel="noopener noreferrer" aria-label="Open Khang Thai LinkedIn (opens in new tab)">
+            linkedin.com/in/khang-thai-b0780538a
+          </a>
+        </div>
+      </div>
+
+      <p style="margin-top:10px;color:#666;font-size:.9rem">
+        Or download my resume: <a class="btn" href="./Resume.png" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
+      </p>
+    </footer>
+</body>
+</html>
